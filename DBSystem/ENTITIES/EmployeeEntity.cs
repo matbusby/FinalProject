@@ -17,10 +17,19 @@ namespace DBSystem.ENTITIES
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string DateHired { get; set; }
-        public string ReleaseDate { get; set; }
+        public DateTime DateHired { get; set; }
+        public DateTime? ReleaseDate { get; set; }
         public int PositionID { get; set; }
         public int ProgramID { get; set; }
         public string LoginID { get; set; }
+
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
     }
 }

@@ -38,7 +38,16 @@
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="First Name">
+                <asp:TemplateField HeaderText="Full Name">
+                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                    <ItemTemplate>
+                        <asp:Label ID="FullName" runat="server" 
+                            Text='<%# Eval("FullName") %>'>
+                        </asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+<%--                <asp:TemplateField HeaderText="First Name">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
                         <asp:Label ID="FirstName" runat="server" 
@@ -54,33 +63,53 @@
                             Text='<%# Eval("LastName") %>'>
                         </asp:Label>
                     </ItemTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
 
                 <asp:TemplateField HeaderText="Date Hired">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                      <ItemTemplate>
                         <asp:Label ID="DateHired" runat="server" 
-                            Text='<%# Eval("DateHired") == null ? "each" : Eval("QuantityPerUnit") %>'>
+                            Text='<%# Eval("DateHired") %>'>
                         </asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="Price ($)">
-                    <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
+                <asp:TemplateField HeaderText="Date Released">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                      <ItemTemplate>
-                        <asp:Label ID="UnitPrice" runat="server" 
-                            Text='<%# string.Format("{0:0.00}",Eval("UnitPrice"))%>'>
+                        <asp:Label ID="ReleaseDate" runat="server" 
+                            Text='<%# Eval("ReleaseDate") %>'>
                         </asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Disc">
+
+                <asp:TemplateField HeaderText="Position ID">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                      <ItemTemplate>
-                         <asp:CheckBox ID="Discontinued" runat="server" 
-                              Checked='<%# Eval("Discontinued") %>'/>
+                        <asp:Label ID="PositionID" runat="server" 
+                            Text='<%# Eval("PositionID") %>'>
+                        </asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Program ID">
+                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                     <ItemTemplate>
+                        <asp:Label ID="ProgramID" runat="server" 
+                            Text='<%# Eval("ProgramID") %>'>
+                        </asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="Login ID">
+                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                     <ItemTemplate>
+                        <asp:Label ID="LoginID" runat="server" 
+                            Text='<%# Eval("LoginID") %>'>
+                        </asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
             </Columns>
             <EmptyDataTemplate>
                 no data to display

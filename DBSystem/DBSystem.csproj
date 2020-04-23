@@ -53,8 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EmployeeController.cs" />
+    <Compile Include="BLL\PositionController.cs" />
+    <Compile Include="BLL\ProgramController.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="ENTITIES\EmployeeEntity.cs" />
+    <Compile Include="ENTITIES\PositionEntity.cs" />
+    <Compile Include="ENTITIES\ProgramEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

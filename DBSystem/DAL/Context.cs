@@ -15,5 +15,7 @@ namespace DBSystem.DAL
         //public Context() : base("FSIS_db") { }
         //public Context() : base("StarTEDDB") { }
         public DbSet<EmployeeEntity> EmployeeEntitys { get; set; }
+        public DbSet<PositionEntity> PositionEntities { get; set; }
+        public DbSet<ProgramEntity> ProgramEntities { get; set; }
     }
 }

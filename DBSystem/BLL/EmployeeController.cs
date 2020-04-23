@@ -26,22 +26,22 @@ namespace DBSystem.BLL
                 return context.EmployeeEntitys.ToList();
             }
         }
-        public List<EmployeeEntity> FindByID(int id)
-        {
-            using (var context = new Context())
-            {
-                IEnumerable<EmployeeEntity> results =
-                    context.Database.SqlQuery<EmployeeEntity>("Products_GetByCategories @ID"
-                        , new SqlParameter("ID", id));
-                return results.ToList();
-            }
-        }
+        //public List<EmployeeEntity> FindByID(int id)
+        //{
+        //    using (var context = new Context())
+        //    {
+        //        IEnumerable<EmployeeEntity> results =
+        //            context.Database.SqlQuery<EmployeeEntity>("Products_GetByCategories @ID"
+        //                , new SqlParameter("ID", id));
+        //        return results.ToList();
+        //    }
+        //}
         public List<EmployeeEntity> FindByPartialName(string partialname)
         {
             using (var context = new Context())
             {
                 IEnumerable<EmployeeEntity> results =
-                    context.Database.SqlQuery<EmployeeEntity>("Products_GetByPartialProductName @PartialName",
+                    context.Database.SqlQuery<EmployeeEntity>("Employees_FindByPartialName @PartialName",
                          new SqlParameter("PartialName", partialname));
                 return results.ToList();
             }
@@ -64,11 +64,11 @@ namespace DBSystem.BLL
                 return context.SaveChanges();
             }
         }
-        public int Delete(int productid)
+        public int Delete(int employeeid)
         {
             using (var context = new Context())
             {
-                var existing = context.EmployeeEntitys.Find(productid);
+                var existing = context.EmployeeEntitys.Find(employeeid);
                 if (existing == null)
                 {
                     throw new Exception("Record has been removed from database");
