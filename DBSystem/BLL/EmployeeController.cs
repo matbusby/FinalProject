@@ -46,6 +46,18 @@ namespace DBSystem.BLL
                 return results.ToList();
             }
         }
+
+        public List<EmployeeEntity> FindByPosition(int positionID)
+        {
+            using (var context = new Context())
+            {
+                IEnumerable<EmployeeEntity> results =
+                    context.Database.SqlQuery<EmployeeEntity>("Employees_FindByPosition @positionid",
+                        new SqlParameter("positionid", positionID));
+                return results.ToList();
+            }
+        }
+
         public int Add(EmployeeEntity item)
         {
             using (var context = new Context())

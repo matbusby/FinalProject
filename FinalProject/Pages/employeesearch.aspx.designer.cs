@@ -51,6 +51,33 @@ namespace FinalProject.Pages
         protected global::System.Web.UI.WebControls.Button SearchEmployeesPartial;
 
         /// <summary>
+        /// PositionSearchLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PositionSearchLabel;
+
+        /// <summary>
+        /// PositionList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList PositionList;
+
+        /// <summary>
+        /// PositionListButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PositionListButton;
+
+        /// <summary>
         /// MessageLabel control.
         /// </summary>
         /// <remarks>

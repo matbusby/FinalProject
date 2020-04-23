@@ -11,7 +11,7 @@ namespace FinalProject.Pages
 {
 
 
-    public partial class CRUD
+    public partial class CRUDPage
     {
 
         /// <summary>

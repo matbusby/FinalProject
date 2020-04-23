@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CRUD.aspx.cs" Inherits="FinalProject.Pages.CRUD" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CRUDPage.aspx.cs" Inherits="FinalProject.Pages.CRUDPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    
         <h1>Employee Maintenance Page</h1>
 
     <%--Employee ID--%>
@@ -105,6 +106,19 @@
         </div>
     </div>
 
+<%--    <div class="row">
+        <div class="col-md-4 text-right">
+                  <asp:Label ID="Label11" runat="server" Text="Release Employee?"
+                     AssociatedControlID="Released">
+                  </asp:Label>
+        </div>
+        <div class="col-md-4 text-left">
+                <asp:CheckBox ID="Released" runat="server">
+                </asp:CheckBox> 
+        </div>
+    </div>--%>
+
+
     <%--End--%>
 
 
@@ -140,5 +154,6 @@
             return confirm("Are you sure you wish to delete this record?");
        }
    </script>
+
 
 </asp:Content>

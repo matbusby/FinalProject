@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="employeesearch.aspx.cs" Inherits="FinalProject.Pages.employeesearch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1> Partial String Search to Custom GridView to Single Record via Page Navigation</h1>
+    <h1> Employee Search</h1>
     <div class="offset-2">
         <asp:DataList ID="Message" runat="server" Enabled="False">
         <ItemTemplate>
@@ -11,7 +11,18 @@
         <asp:Label ID="Label1" runat="server" Text="Enter a Partial Employee Name "></asp:Label>&nbsp;&nbsp
         <asp:TextBox ID="PartialEmployeeNameV2" runat="server"></asp:TextBox>
         <asp:Button ID="SearchEmployeesPartial" runat="server" Text="Search Employees"
-            OnClick="SearchEmployeesPartial_Click" />
+            OnClick="SearchEmployeesPartial_Click" /><br />
+
+        <%--Search by ID--%>
+
+        <asp:Label ID="PositionSearchLabel" runat="server" Text="Position" AssociatedControlID="PositionList"></asp:Label>&nbsp;&nbsp
+        <asp:DropDownList ID="PositionList" runat="server" Width="300px"></asp:DropDownList> 
+        <asp:Button ID="PositionListButton" runat="server" Text="Search Positions" OnClick="SearchPositions_Click" />
+        
+<%--        <asp:Label ID="Label2" runat="server" Text="Select"></asp:Label>&nbsp;&nbsp
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>--%>
+
+
         <br />
         <br />
         <asp:Label ID="MessageLabel" runat="server" ></asp:Label>

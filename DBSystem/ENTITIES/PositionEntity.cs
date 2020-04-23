@@ -11,8 +11,9 @@ using System.Security.Permissions;
 namespace DBSystem.ENTITIES
 {
     [Table("Positions")]
-    class PositionEntity
+    public class PositionEntity
     {
+        [Key]
         public int PositionID { get; set; }
         public string Description { get; set; }
         public int? ReportsTo { get; set; }

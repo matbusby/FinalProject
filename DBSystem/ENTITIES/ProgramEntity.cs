@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Permissions;
+using System.Data.SqlTypes;
 
 namespace DBSystem.ENTITIES
 {
     [Table("Programs")]
-    class ProgramEntity
+    public class ProgramEntity
     {
-        public int ProgramID { get; set; }
+        [Key]
+        public int? ProgramID { get; set; }
         public string ProgramName { get; set; }
         public string DiplomaName { get; set; }
-        public int SchoolCode { get; set; }
-        public double Tuition { get; set; }
-        public double InternationalTuition { get; set; }
+        public string SchoolCode { get; set; }
+        public SqlMoney Tuition { get; set; }
+        public SqlMoney InternationalTuition { get; set; }
     }
 }
